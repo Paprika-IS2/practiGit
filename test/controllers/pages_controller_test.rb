@@ -2,8 +2,10 @@ require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get pages_index_url
-    assert_response :success
+      get root_url
+      #get pages_index_url
+      assert_response :success
+      assert_select 'h1', 'Welcome to our project'
   end
 
 end
